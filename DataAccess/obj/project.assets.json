@@ -9480,11 +9480,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Outsource\\TakePhotos\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "D:\\Outsource\\take_photos\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "D:\\Outsource\\TakePhotos\\DataAccess\\DataAccess.csproj",
+      "projectPath": "D:\\Outsource\\take_photos\\DataAccess\\DataAccess.csproj",
       "packagesPath": "C:\\Users\\hieun\\.nuget\\packages\\",
-      "outputPath": "D:\\Outsource\\TakePhotos\\DataAccess\\obj\\",
+      "outputPath": "D:\\Outsource\\take_photos\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hieun\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9501,8 +9501,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Outsource\\TakePhotos\\Utils\\Utils.csproj": {
-              "projectPath": "D:\\Outsource\\TakePhotos\\Utils\\Utils.csproj"
+            "D:\\Outsource\\take_photos\\Utils\\Utils.csproj": {
+              "projectPath": "D:\\Outsource\\take_photos\\Utils\\Utils.csproj"
             }
           }
         }

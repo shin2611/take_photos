@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HVPhRHwDSuNQp71z274m395tZCy/wp9dp3vVuHdIle3/eB3S+yentnE4FpIiaegD1pPkY+SqUu2Yp1hT012tqQ==",
+  "dgSpecHash": "p9e7UEJBFiHr77X7hrnbUn049+BAw3+J6zsW3pPZjYHLcBozXobbbOjmRjp3ln1/gjx2fjSYowZd7vVQi9tr9A==",
   "success": true,
-  "projectFilePath": "D:\\Outsource\\TakePhotos\\TakePhotos\\TakePhotos.csproj",
+  "projectFilePath": "D:\\Outsource\\take_photos\\TakePhotos\\TakePhotos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hieun\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Users\\hieun\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

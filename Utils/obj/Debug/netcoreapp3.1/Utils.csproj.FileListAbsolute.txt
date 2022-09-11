@@ -28,3 +28,13 @@ D:\Outsource\TakePhotos\Utils\obj\Debug\netcoreapp3.1\Utils.AssemblyInfo.cs
 D:\Outsource\TakePhotos\Utils\obj\Debug\netcoreapp3.1\Utils.csproj.CoreCompileInputs.cache
 D:\Outsource\TakePhotos\Utils\obj\Debug\netcoreapp3.1\Utils.dll
 D:\Outsource\TakePhotos\Utils\obj\Debug\netcoreapp3.1\Utils.pdb
+D:\Outsource\take_photos\Utils\bin\Debug\netcoreapp3.1\Utils.deps.json
+D:\Outsource\take_photos\Utils\bin\Debug\netcoreapp3.1\Utils.dll
+D:\Outsource\take_photos\Utils\bin\Debug\netcoreapp3.1\Utils.pdb
+D:\Outsource\take_photos\Utils\obj\Debug\netcoreapp3.1\Utils.csproj.AssemblyReference.cache
+D:\Outsource\take_photos\Utils\obj\Debug\netcoreapp3.1\Utils.GeneratedMSBuildEditorConfig.editorconfig
+D:\Outsource\take_photos\Utils\obj\Debug\netcoreapp3.1\Utils.AssemblyInfoInputs.cache
+D:\Outsource\take_photos\Utils\obj\Debug\netcoreapp3.1\Utils.AssemblyInfo.cs
+D:\Outsource\take_photos\Utils\obj\Debug\netcoreapp3.1\Utils.csproj.CoreCompileInputs.cache
+D:\Outsource\take_photos\Utils\obj\Debug\netcoreapp3.1\Utils.dll
+D:\Outsource\take_photos\Utils\obj\Debug\netcoreapp3.1\Utils.pdb

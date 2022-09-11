@@ -37,3 +37,16 @@ D:\Outsource\TakePhotos\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.Cor
 D:\Outsource\TakePhotos\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.CopyComplete
 D:\Outsource\TakePhotos\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.dll
 D:\Outsource\TakePhotos\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.pdb
+D:\Outsource\take_photos\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.deps.json
+D:\Outsource\take_photos\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.dll
+D:\Outsource\take_photos\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.pdb
+D:\Outsource\take_photos\DataAccess\bin\Debug\netcoreapp3.1\Utils.dll
+D:\Outsource\take_photos\DataAccess\bin\Debug\netcoreapp3.1\Utils.pdb
+D:\Outsource\take_photos\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.AssemblyReference.cache
+D:\Outsource\take_photos\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\Outsource\take_photos\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.AssemblyInfoInputs.cache
+D:\Outsource\take_photos\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.AssemblyInfo.cs
+D:\Outsource\take_photos\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.CoreCompileInputs.cache
+D:\Outsource\take_photos\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.CopyComplete
+D:\Outsource\take_photos\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.dll
+D:\Outsource\take_photos\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.pdb

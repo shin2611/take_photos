@@ -9460,11 +9460,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Outsource\\TakePhotos\\Utils\\Utils.csproj",
+      "projectUniqueName": "D:\\Outsource\\take_photos\\Utils\\Utils.csproj",
       "projectName": "Utils",
-      "projectPath": "D:\\Outsource\\TakePhotos\\Utils\\Utils.csproj",
+      "projectPath": "D:\\Outsource\\take_photos\\Utils\\Utils.csproj",
       "packagesPath": "C:\\Users\\hieun\\.nuget\\packages\\",
-      "outputPath": "D:\\Outsource\\TakePhotos\\Utils\\obj\\",
+      "outputPath": "D:\\Outsource\\take_photos\\Utils\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hieun\\AppData\\Roaming\\NuGet\\NuGet.Config",
