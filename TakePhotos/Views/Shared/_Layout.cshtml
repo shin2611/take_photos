@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="robots" content="" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta name="format-detection" content="telephone=no">
+    <title>Take by photos </title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
+    <link href="~/Content/vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+    <link href="~/Content/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="~/Content/css/style.css" rel="stylesheet">
+    <script src="~/js/jquery-1.11.3.js"></script>
+
+    <script>
+        var UrlRoot = '@Utils.Config.URL_ROOT';
+        var myArray = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40"];
+        var myArray2 = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40"];
+    </script>
+</head>
+<body class="vh-100">
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    <div class="authincation h-100">
+        <div class="container h-100">
+            <div class="row justify-content-center h-100 align-items-center">
+                @RenderBody()
+
+            </div>
+        </div>
+    </div>
+
+    <!-- #/ container -->
+    <!-- Common JS -->
+    <script src="~/Content/vendor/global/global.min.js"></script>
+    <script src="~/Content/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="~/Content/vendor/sweetalert2/dist/sweetalert2.min.js"></script>
+
+    <!-- Custom script -->
+    <script src="~/Content/vendor/deznav/deznav.min.js"></script>
+    <script src="~/Content/js/custom.min.js"></script>
+    <script src="~/Content/js/deznav-init.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#txtStudentCode').on('keypress', function (e) {
+                if (e.which === 13) {
+                    Search();
+                }
+            });
+            //const newArr = myArray.filter(e => e !== '01');
+        });
+        function Search() {
+            debugger;
+            var studentCode = $('#txtStudentCode').val();
+            if (studentCode == '') {
+                sweetAlert("Oops...", "Bạn chưa nhập mã sinh viên !!", "error");
+            } else {
+                $.ajax({
+                    type: 'POST',
+                    url: UrlRoot + "Home/CheckDataStudent",
+                    data: { studentCode: studentCode },
+                    dataType: 'json',
+                    success: function (res) {
+                        if (res.response >= 0) {
+                            debugger;
+                            var Data = JSON.parse(res.data)
+                            if (Data.success == true) {
+                                var code = Data.data.student.studentCode;
+                                window.location.href = UrlRoot + "Home/FormTakePhotos?studentCode=" + code;
+                            }
+                            else
+                                swal("Học viên không tồn tại !!");
+                        }
+                        else {
+                            sweetAlert("Oops...", res.message, "error");
+                        }
+                    },
+                    error: function () {
+                        sweetAlert("Oops...", "Hệ thống bận, vui lòng quay lại sau!", "error");
+                    }
+                });
+            }
+        }
+    </script>
+
+</body>
+</html>
