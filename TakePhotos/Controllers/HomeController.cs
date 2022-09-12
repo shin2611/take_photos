@@ -61,7 +61,7 @@ namespace TakePhotos.Controllers
             if (res.statusCode == 200)
                 return Json(new { Response = 1, message = "success", Data = res.data });
 
-            return Json(new { Response = -9, message = "Có lỗi xảy ra", Data = "" });
+            return Json(new { Response = -9, message = "Mã sinh viên không đúng", Data = "" });
         }
 
         public JsonResult UploadWebCamImage(string imageData, string code)
