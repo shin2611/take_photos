@@ -11,6 +11,8 @@ using Utils;
 using TakePhotos.Handler;
 using DataAccess.Factory;
 using DataAccess.Implement;
+using TakePhotos.Models;
+using Newtonsoft.Json;
 
 namespace TakePhotos.Controllers
 {
@@ -48,6 +50,14 @@ namespace TakePhotos.Controllers
         public IActionResult FormTakePhotos(string studentCode)
         {
             ViewBag.StudentCode = studentCode;
+            ViewBag.StudentName = "";
+            var url_data = "https://ielts-api.hoccontentcunglina.com/api/v1/students/student-code/" + studentCode;
+            var res = AccessAPI.GetDataAPI(url_data);
+            if (res.statusCode == 200)
+            {
+                var returnData = JsonConvert.DeserializeObject<PostResultInfo>(res.data);
+                ViewBag.StudentName = returnData.data.user.username;
+            }
             return View();
         }
 
@@ -74,7 +84,7 @@ namespace TakePhotos.Controllers
             NLogLogger.LogInfo("UPLOAD IMAGE ARTICLE PATH :" + uploads);
             try
             {
-                fileName = DateTime.Now.ToString().Replace("/", "-").Replace(" ", "_").Replace(":", "") + ".png"; 
+                fileName = DateTime.Now.ToString().Replace("/", "-").Replace(" ", "_").Replace(":", "") + ".png";
                 using (var fileStream = new FileStream(Path.Combine(uploads, fileName), FileMode.Create))
                 {
                     //file.CopyTo(fileStream);
@@ -88,7 +98,7 @@ namespace TakePhotos.Controllers
                 var imageUrl = Config.IMAGE_URL + fileName;
                 var imageDataBase64 = "data:image/png;base64," + imageData;
                 var result = AbstractDAOFactory.Instance().CreateWEBDAO().InsertPhotos(imageUrl, imageDataBase64, code);
-                if(result > 0)
+                if (result > 0)
                     return Json(new { Response = 1, message = "success" });
                 else
                     return Json(new { Response = -99, message = "Có lỗi xảy ra" });
