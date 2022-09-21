@@ -132,8 +132,15 @@
                             debugger;
                             var Data = JSON.parse(res.data)
                             if (Data.success == true) {
-                                var code = Data.data.student.studentCode;
-                                window.location.href = UrlRoot + "Home/FormTakePhotos?studentCode=" + code;
+                                if (Data.data.examination.active == false) {
+                                    swal("Ca thi chưa bắt đầu, bạn vui lòng quay lại sau !!");
+                                }
+                                else if (Data.data.examination.canStart == true) {
+                                    swal("Ca thi đã bắt đầu, bạn vui lòng quay lại sau !!");
+                                } else {
+                                    var code = Data.data.student.studentCode;
+                                    window.location.href = UrlRoot + "Home/FormTakePhotos?studentCode=" + code;
+                                }
                             }
                             else
                                 swal("Học viên không tồn tại !!");
