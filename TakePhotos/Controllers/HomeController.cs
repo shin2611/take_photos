@@ -51,12 +51,14 @@ namespace TakePhotos.Controllers
         {
             ViewBag.StudentCode = studentCode;
             ViewBag.StudentName = "";
-            var url_data = "https://ielts-api.hoccontentcunglina.com/api/v1/students/student-code/" + studentCode;
+            ViewBag.OrderNumber = 0;
+            var url_data = Config.URL_API + "api/v1/students/student-code/" + studentCode;
             var res = AccessAPI.GetDataAPI(url_data);
             if (res.statusCode == 200)
             {
                 var returnData = JsonConvert.DeserializeObject<PostResultInfo>(res.data);
                 ViewBag.StudentName = returnData.data.user.username;
+                ViewBag.OrderNumber = returnData.data.orderNumber;
             }
             return View();
         }
@@ -66,7 +68,7 @@ namespace TakePhotos.Controllers
             if (string.IsNullOrEmpty(studentCode))
                 return Json(new { Response = -600, message = "Bạn chưa nhập mã học viên" });
 
-            var url_data = "https://ielts-api.hoccontentcunglina.com/api/v1/students/student-code/" + studentCode;
+            var url_data = Config.URL_API + "api/v1/students/student-code/" + studentCode;
             var res = AccessAPI.GetDataAPI(url_data);
             if (res.statusCode == 200)
                 return Json(new { Response = 1, message = "success", Data = res.data });

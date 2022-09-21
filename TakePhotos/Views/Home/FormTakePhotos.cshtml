@@ -6,7 +6,8 @@
 <div class="col-md-12">
     <div class="jumbotron" style="margin-top:20px;padding:20px;text-align:center;">
         <input type="hidden" id="StudentCode2" value="@ViewBag.StudentCode" />
-        <input type="hidden" id="StudentName" value="@ViewBag.StudentName"/>
+        <input type="hidden" id="StudentName" value="@ViewBag.StudentName" />
+        <input type="hidden" id="OrderNumber" value="@ViewBag.OrderNumber" />
         <p><span id="errorMsg"></span></p>
         <div class="row">
             <div class="col-lg-8">
@@ -85,12 +86,30 @@
 
         // Capture the image into canvas from Webcam streaming Video element
         context.drawImage(video, 0, 0);
-        SaveCapture();
+       // SaveCapture();
+        ShowData();
+    }
+
+    function ShowData() {
+        var studentCode = $('#StudentCode2').val();
+        var studentName = $('#StudentName').val();
+        var orderNumber = $('#OrderNumber').val();
+        swal({
+            title: "Chào mừng bạn " + studentName,
+            text: "Mời bạn về máy số " + orderNumber + " để dự thi",
+            type: "success",
+            showCancelButton: !1,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Mời bạn tiếp theo !",
+        }).then(function () {
+            window.location.href = UrlRoot;
+        });
     }
 
     function SaveCapture() {
         var studentCode = $('#StudentCode2').val();
         var studentName = $('#StudentName').val();
+        var orderNumber = $('#OrderNumber').val();
         // Below new canvas to generate flip/mirron image from existing canvas
         var destinationCanvas = document.createElement("canvas");
         var destCtx = destinationCanvas.getContext('2d');
@@ -114,11 +133,11 @@
             dataType: 'json',
             success: function (data) {
                 if (data.response >= 0) {
-                    const random = Math.floor(Math.random() * myArray.length);
-                    console.log(random, myArray[random]);
+                    //const random = Math.floor(Math.random() * myArray.length);
+                    //console.log(random, myArray[random]);
                     swal({
                         title: "Chào mừng bạn " + studentName,
-                        text: "Mời bạn về máy số " + myArray[random] + " để dự thi",
+                        text: "Mời bạn về máy số " + orderNumber + " để dự thi",
                         type: "success",
                         showCancelButton: !1,
                         confirmButtonColor: "#DD6B55",

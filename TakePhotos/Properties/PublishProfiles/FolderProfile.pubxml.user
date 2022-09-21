@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\hieun\OneDrive\Desktop\TakePhoto_Win</_PublishTargetUrl>
+    <History>True|2022-09-21T05:00:28.6827488Z;True|2022-09-21T11:48:20.9151550+07:00;True|2022-09-20T21:54:39.0539824+07:00;True|2022-09-20T10:07:00.3932321+07:00;True|2022-09-15T11:07:03.9305534+07:00;True|2022-09-13T14:59:57.6061599+07:00;True|2022-09-13T14:48:09.3745302+07:00;True|2022-09-12T10:17:19.7383425+07:00;</History>
+  </PropertyGroup>
+</Project>

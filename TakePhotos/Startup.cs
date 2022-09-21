@@ -43,6 +43,7 @@ namespace TakePhotos
             Config.ACCESS_TOKEN = Configuration.GetSection("ACCESS_TOKEN").Value;
             Config.MEDIA_DISK = Configuration.GetSection("MEDIA_DISK").Value;
             Config.IMAGE_URL = Configuration.GetSection("IMAGE_URL").Value;
+            Config.URL_API = Configuration.GetSection("URL_API").Value;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

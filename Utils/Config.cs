@@ -10,6 +10,7 @@ namespace Utils
     public sealed class Config
     {
         public static string URL_ROOT { get; set; }
+        public static string URL_API { get; set; }
         public static string ACCESS_TOKEN { get; set; }
         public static string MEDIA_DISK { get; set; }
         public static string CURRENT_URL_ROOT { get; set; }
