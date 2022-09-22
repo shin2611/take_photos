@@ -1963,6 +1963,14 @@ D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\w
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\Content\icons\themify-icons\fonts\themify9f24.svg
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\Content\icons\themify-icons\fonts\themifyd41d.eot
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\Content\images\1.png
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\Content\images\big\img1.jpg
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\Content\images\big\img2.jpg
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\Content\images\big\img3.jpg
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\Content\images\big\img4.jpg
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\Content\images\big\img5.jpg
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\Content\images\big\img6.jpg
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\Content\images\big\img7.jpg
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\Content\images\big\img8.jpg
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\Content\images\demo_kyc.jpg
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\Content\images\duca.7a75343055b44fb67a8a.png
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\Content\images\neu.8da69464baf1c1befea3.png
@@ -2527,6 +2535,9 @@ D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\w
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\Content\vendor\deznav\deznav.css
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\Content\vendor\deznav\deznav.css.map
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\Content\vendor\deznav\deznav.min.js
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\Content\vendor\deznav\metisMenu.js.map
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\Content\vendor\deznav\metisMenu.min.js
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\Content\vendor\deznav\metisMenu.min.js.map
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\Content\vendor\draggable\draggable.js
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\Content\vendor\dropzone\.gitignore
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\Content\vendor\dropzone\.tagconfig

@@ -427,8 +427,7 @@
      *  @return {Object} video type
      *  Ex:{ youtube  :  ["//www.youtube.com/watch?v=c0asJgSyxcY", "c0asJgSyxcY"] }
      */
-    Plugin.prototype.isVideo = function(src, index) {
-
+    Plugin.prototype.isVideo = function (src, index) {
         var html;
         if (this.s.dynamic) {
             html = this.s.dynamicEl[index].html;
@@ -585,7 +584,6 @@
      *  @param {Boolean} delay - delay for adding complete class. it is 0 except first time.
      */
     Plugin.prototype.loadContent = function(index, rec, delay) {
-
         var _this = this;
         var _hasPoster = false;
         var _$img;
@@ -594,7 +592,7 @@
         var _srcset;
         var _sizes;
         var _html;
-        var getResponsiveSrc = function(srcItms) {
+        var getResponsiveSrc = function (srcItms) {
             var rsWidth = [];
             var rsSrc = [];
             for (var i = 0; i < srcItms.length; i++) {
@@ -619,7 +617,6 @@
         };
 
         if (_this.s.dynamic) {
-
             if (_this.s.dynamicEl[index].poster) {
                 _hasPoster = true;
                 _poster = _this.s.dynamicEl[index].poster;
@@ -1915,7 +1912,8 @@
         }
     };
 
-    Thumbnail.prototype.build = function() {
+    Thumbnail.prototype.build = function () {
+        debugger;
         var _this = this;
         var thumbList = '';
         var vimeoErrorThumbSize = '';
@@ -1955,6 +1953,7 @@
         }
 
         function getThumb(src, thumb, index) {
+            debugger;
             var isVideo = _this.core.isVideo(src, index) || {};
             var thumbImg;
             var vimeoId = '';

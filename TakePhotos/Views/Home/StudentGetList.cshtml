@@ -1,0 +1,65 @@
+﻿@using DataAccess.Models
+@model List<Photos>
+@{
+    ViewData["Title"] = "Danh sách học viên dự thi";
+    Layout = "/Views/Shared/_Layout2.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Danh sách học viên dự thi</h4>
+            </div>
+            <div class="card-body pb-1">
+                <div id="lightgallery" class="row">
+                    @if (Model != null && Model.Count > 0)
+                    {
+                        foreach (var item in Model)
+                        {
+                            <a href="@item.ImageUrl" data-exthumbimage="@item.ImageUrl" data-src="@item.ImageUrl" class="col-lg-3 col-md-6 mb-4">
+                                <img src="@item.ImageUrl" alt="" style="width:100%;" />
+                                <span class="span-item">Mã học viên : @item.StudentCode</span>
+                            </a>
+                        }
+                    }
+                    @*<a href="/Content/images/big/img1.jpg" data-exthumbimage="/Content/images/big/img1.jpg" data-src="/Content/images/big/img1.jpg" class="col-lg-3 col-md-6 mb-4">
+                        <img src="/Content/images/big/img1.jpg" alt="" style="width:100%;" />
+                        <span class="span-item">Mã học viên : 123456789</span>
+                    </a>
+                    <a href="/Content/images/big/img2.jpg" data-exthumbimage="/Content/images/big/img2.jpg" data-src="/Content/images/big/img2.jpg" class="col-lg-3 col-md-6 mb-4">
+                        <img src="/Content/images/big/img2.jpg" alt="" style="width:100%;" />
+                        <span class="span-item">Mã học viên : 123456789</span>
+                    </a>
+                    <a href="/Content/images/big/img3.jpg" data-exthumbimage="/Content/images/big/img3.jpg" data-src="/Content/images/big/img3.jpg" class="col-lg-3 col-md-6 mb-4">
+                        <img src="/Content/images/big/img3.jpg" alt="" style="width:100%;" />
+                        <span class="span-item">Mã học viên : 123456789</span>
+                    </a>
+                    <a href="/Content/images/big/img4.jpg" data-exthumbimage="/Content/images/big/img4.jpg" data-src="/Content/images/big/img4.jpg" class="col-lg-3 col-md-6 mb-4">
+                        <img src="/Content/images/big/img4.jpg" alt="" style="width:100%;" />
+                        <span class="span-item">Mã học viên : 123456789</span>
+                    </a>
+
+                    <a href="/Content/images/big/img5.jpg" data-exthumbimage="/Content/images/big/img5.jpg" data-src="/Content/images/big/img5.jpg" class="col-lg-3 col-md-6 mb-4">
+                        <img src="/Content/images/big/img5.jpg" alt="" style="width:100%;" />
+                        <span class="span-item">Mã học viên : 123456789</span>
+                    </a>
+                    <a href="/Content/images/big/img6.jpg" data-exthumbimage="/Content/images/big/img6.jpg" data-src="/Content/images/big/img6.jpg" class="col-lg-3 col-md-6 mb-4">
+                        <img src="/Content/images/big/img6.jpg" alt="" style="width:100%;" />
+                        <span class="span-item">Mã học viên : 123456789</span>
+                    </a>
+                    <a href="/Content/images/big/img7.jpg" data-exthumbimage="/Content/images/big/img7.jpg" data-src="/Content/images/big/img7.jpg" class="col-lg-3 col-md-6 mb-4">
+                        <img src="/Content/images/big/img7.jpg" alt="" style="width:100%;" />
+                        <span class="span-item">Mã học viên : 123456789</span>
+                    </a>
+                    <a href="/Content/images/big/img8.jpg" data-exthumbimage="/Content/images/big/img8.jpg" data-src="/Content/images/big/img8.jpg" class="col-lg-3 col-md-6 mb-4">
+                        <img src="/Content/images/big/img8.jpg" alt="" style="width:100%;" />
+                        <span class="span-item">Mã học viên : 123456789</span>
+                    </a>*@
+                </div>
+            </div>
+        </div>
+        <!-- /# card -->
+    </div>
+</div>

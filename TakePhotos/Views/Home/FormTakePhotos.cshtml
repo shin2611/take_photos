@@ -8,6 +8,7 @@
         <input type="hidden" id="StudentCode2" value="@ViewBag.StudentCode" />
         <input type="hidden" id="StudentName" value="@ViewBag.StudentName" />
         <input type="hidden" id="OrderNumber" value="@ViewBag.OrderNumber" />
+        <input type="hidden" id="ExamId" value="@ViewBag.ExamId"/>
         <p><span id="errorMsg"></span></p>
         <div class="row">
             <div class="col-lg-8">
@@ -22,12 +23,11 @@
                 <h4>
                     Hình ảnh minh họa
                 </h4>
-                <div>
+                <div id="img-demo">
                     <img src="~/Content/images/demo_kyc.jpg" style="width:340px;height:515px;" />
                 </div>
-                @*<canvas style="border:solid 1px #ddd;background-color:white;" id="canvas" width="475" height="475"></canvas>*@
+                <canvas style="border:solid 1px #ddd;background-color:white;display:none;" id="canvas" width="340" height="515"></canvas>
             </div>
-            <canvas style="border:solid 1px #ddd;background-color:white;display:none;" id="canvas" width="475" height="475"></canvas>
         </div>
     </div>
 </div>
@@ -86,14 +86,16 @@
 
         // Capture the image into canvas from Webcam streaming Video element
         context.drawImage(video, 0, 0);
-       // SaveCapture();
-        ShowData();
+        $('#img-demo').css("display", "none");
+        $('#canvas').css("display", "block");
+        SaveCapture();
     }
 
     function ShowData() {
         var studentCode = $('#StudentCode2').val();
         var studentName = $('#StudentName').val();
         var orderNumber = $('#OrderNumber').val();
+        var examId = $('#ExamId').val();
         swal({
             title: "Chào mừng bạn " + studentName,
             text: "Mời bạn về máy số " + orderNumber + " để dự thi",
@@ -110,6 +112,7 @@
         var studentCode = $('#StudentCode2').val();
         var studentName = $('#StudentName').val();
         var orderNumber = $('#OrderNumber').val();
+        var examId = $('#ExamId').val();
         // Below new canvas to generate flip/mirron image from existing canvas
         var destinationCanvas = document.createElement("canvas");
         var destCtx = destinationCanvas.getContext('2d');
@@ -128,7 +131,7 @@
         $.ajax({
             type: 'POST',
             url: UrlRoot + 'Home/UploadWebCamImage/',
-            data: { imageData: imagebase64data, code: studentCode },
+            data: { imageData: imagebase64data, code: studentCode, examId: examId},
             /*contentType: 'application/json; charset=utf-8',*/
             dataType: 'json',
             success: function (data) {
@@ -143,7 +146,6 @@
                         confirmButtonColor: "#DD6B55",
                         confirmButtonText: "Mời bạn tiếp theo !",
                     }).then(function () {
-                        myArray.filter(e => e !== myArray[random]);
                         window.location.href = UrlRoot;
                     });
                 } else {

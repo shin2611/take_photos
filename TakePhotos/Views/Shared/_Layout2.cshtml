@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="robots" content="" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta name="format-detection" content="telephone=no">
+    <title>Take by photos </title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
+    <link href="~/Content/vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+    <link href="~/Content/vendor/lightgallery/css/lightgallery.min.css" rel="stylesheet">
+    <link href="~/Content/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="~/Content/css/style.css" rel="stylesheet">
+    <script src="~/js/jquery-1.11.3.js"></script>
+
+    <script>
+        var UrlRoot = '@Utils.Config.URL_ROOT';
+    </script>
+
+    <style>
+        .logo-footer {
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 140px;
+            display: flex;
+            position: fixed;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .jss1 {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .jss3 {
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            display: flex;
+            padding: 10px 20px;
+            position: fixed;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .span-item {
+            position: relative;
+            left: 30%;
+            font-size: 14px;
+            font-weight: 700;
+            top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    <div>
+        <div class="jss3">
+            <div>
+                <img src="~/Content/images/neu.8da69464baf1c1befea3.png" style="width:300px;" />
+            </div>
+            <div>
+                <img src="~/Content/images/1.png" style="width:150px;" />
+            </div>
+        </div>
+    </div>
+
+    <!--**********************************
+            Content body start
+        ***********************************-->
+    <div class="content-body" style="margin-left:0px;">
+        <div class="container-fluid" id="content-images">
+            @RenderBody()
+        </div>
+    </div>
+    <!--**********************************
+        Content body end
+    ***********************************-->
+    @*<div class="authincation h-100">
+            <div class="container h-100">
+                <div class="row justify-content-center h-100 align-items-center">
+                    @RenderBody()
+
+                </div>
+            </div>
+        </div>*@
+
+    <div class="footer">
+        <div class="logo-footer">
+            <img src="~/Content/images/duca.7a75343055b44fb67a8a.png" style="width:200px;" />
+        </div>
+    </div>
+    <!-- #/ container -->
+    <!-- Common JS -->
+    <script src="~/Content/vendor/global/global.min.js"></script>
+    <script src="~/Content/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="~/Content/vendor/sweetalert2/dist/sweetalert2.min.js"></script>
+    <!-- Custom script -->
+    <script src="~/Content/vendor/deznav/deznav.min.js"></script>
+    <script src="~/Content/vendor/lightgallery/js/lightgallery-all.js"></script>
+    <script src="~/Content/js/custom.min.js"></script>
+    <script src="~/Content/js/deznav-init.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            setInterval(LoadImage(),10000);
+        });
+
+        function LoadImage() {
+            var examId = "";
+            $.ajax({
+                type: 'GET',
+                url: UrlRoot + "Home/StudentImagePartial",
+                data: { examId: examId },
+                dataType: 'html',
+                success: function (res) {
+                    $('#content-images').html(res);
+                },
+                error: function () {
+                    sweetAlert("Oops...", "Hệ thống bận, vui lòng quay lại sau!", "error");
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

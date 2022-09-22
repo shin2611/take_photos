@@ -10,8 +10,6 @@ using TakePhotos.Models;
 using Utils;
 using TakePhotos.Handler;
 using DataAccess.Factory;
-using DataAccess.Implement;
-using TakePhotos.Models;
 using Newtonsoft.Json;
 
 namespace TakePhotos.Controllers
@@ -47,11 +45,28 @@ namespace TakePhotos.Controllers
             return View();
         }
 
+        public IActionResult StudentGetList(string examId)
+        {
+            if (string.IsNullOrEmpty(examId))
+            {
+                return View();
+            }
+            var data = AbstractDAOFactory.Instance().CreateWEBDAO().StudentGetList(examId);
+            return View("StudentGetList", data);
+        }
+
+        public IActionResult StudentImagePartial(string examId)
+        {
+            var data = AbstractDAOFactory.Instance().CreateWEBDAO().StudentGetList(examId);
+            return PartialView("StudentImagePartial", data);
+        }
+
         public IActionResult FormTakePhotos(string studentCode)
         {
             ViewBag.StudentCode = studentCode;
             ViewBag.StudentName = "";
             ViewBag.OrderNumber = 0;
+            ViewBag.ExamId = "";
             var url_data = Config.URL_API + "api/v1/students/student-code/" + studentCode;
             var res = AccessAPI.GetDataAPI(url_data);
             if (res.statusCode == 200)
@@ -59,6 +74,7 @@ namespace TakePhotos.Controllers
                 var returnData = JsonConvert.DeserializeObject<PostResultInfo>(res.data);
                 ViewBag.StudentName = returnData.data.user.username;
                 ViewBag.OrderNumber = returnData.data.orderNumber;
+                ViewBag.ExamId = returnData.data.examination.id;
             }
             return View();
         }
@@ -76,7 +92,7 @@ namespace TakePhotos.Controllers
             return Json(new { Response = -9, message = "Mã sinh viên không đúng", Data = "" });
         }
 
-        public JsonResult UploadWebCamImage(string imageData, string code)
+        public JsonResult UploadWebCamImage(string imageData, string code, string examId)
         {
             string uploads = Path.Combine(Config.MEDIA_DISK + "Photos/");
             //string filename = Path.Combine(Config.MEDIA_DISK + "Photos/") + DateTime.Now.ToString().Replace("/", "-").Replace(" ", "_").Replace(":", "") + ".png";
@@ -99,7 +115,7 @@ namespace TakePhotos.Controllers
                 }
                 var imageUrl = Config.IMAGE_URL + fileName;
                 var imageDataBase64 = "data:image/png;base64," + imageData;
-                var result = AbstractDAOFactory.Instance().CreateWEBDAO().InsertPhotos(imageUrl, imageDataBase64, code);
+                var result = AbstractDAOFactory.Instance().CreateWEBDAO().InsertPhotos(imageUrl, imageDataBase64, code, examId);
                 if (result > 0)
                     return Json(new { Response = 1, message = "success" });
                 else

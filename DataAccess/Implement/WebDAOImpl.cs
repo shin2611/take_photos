@@ -80,22 +80,41 @@ namespace DataAccess.Implement
             }
         }
 
-        public int InsertPhotos(string imageUrl, string imageBase64, string studentCode)
+        public int InsertPhotos(string imageUrl, string imageBase64, string studentCode, string examId)
         {
             try
             {
-                var pars = new SqlParameter[4];
+                var pars = new SqlParameter[5];
                 pars[0] = new SqlParameter("@ImageUrl", imageUrl);
                 pars[1] = new SqlParameter("@ImageBase64", imageBase64);
                 pars[2] = new SqlParameter("@StudentCode", studentCode);
-                pars[3] = new SqlParameter("@ResponseStatus", SqlDbType.Int) { Direction = ParameterDirection.Output };
+                pars[3] = new SqlParameter("@ExamId", examId);
+                pars[4] = new SqlParameter("@ResponseStatus", SqlDbType.Int) { Direction = ParameterDirection.Output };
                 new DBHelper(Config.ConnectionString.SQLConnCMS).ExecuteNonQuerySP("SP_Photos_Insert", pars);
-                return Convert.ToInt32(pars[3].Value);
+                return Convert.ToInt32(pars[4].Value);
             }
             catch (Exception e)
             {
                 NLogLogger.PublishException(e);
                 return -99;
+            }
+        }
+
+        public List<Photos> StudentGetList(string examId)
+        {
+            try
+            {
+                var pars = new SqlParameter[1];
+                pars[0] = new SqlParameter("@ExamId", examId);
+                var list = new DBHelper(Config.ConnectionString.SQLConnCMS).GetListSP<Photos>("SP_Photos_GetList", pars);
+                if (list == null || list.Count <= 0)
+                    return new List<Photos>();
+                return list;
+            }
+            catch (Exception ex)
+            {
+                NLogLogger.LogInfo(ex.ToString());
+                return new List<Photos>();
             }
         }
     }

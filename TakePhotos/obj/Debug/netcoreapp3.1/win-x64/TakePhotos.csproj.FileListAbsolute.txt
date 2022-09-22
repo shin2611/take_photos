@@ -141,3 +141,6 @@ D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\TakePhotos.d
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\TakePhotos.pdb
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\TakePhotos.genruntimeconfig.cache
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\TakePhotos.csproj.AssemblyReference.cache
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\Razor\Views\Home\StudentGetList.cshtml.g.cs
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\Razor\Views\Home\StudentImagePartial.cshtml.g.cs
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\Razor\Views\Shared\_Layout2.cshtml.g.cs

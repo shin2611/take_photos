@@ -125,9 +125,12 @@
         }
 
         // Gallery items
+        debugger;
         if (this.s.dynamic) {
+            debugger;
             this.$items = this.s.dynamicEl;
         } else {
+            debugger;
             if (this.s.selector === 'this') {
                 this.$items = this.$el;
             } else if (this.s.selector !== '') {
@@ -424,8 +427,8 @@
      *  @return {Object} video type
      *  Ex:{ youtube  :  ["//www.youtube.com/watch?v=c0asJgSyxcY", "c0asJgSyxcY"] }
      */
-    Plugin.prototype.isVideo = function(src, index) {
-
+    Plugin.prototype.isVideo = function (src, index) {
+        debugger;
         var html;
         if (this.s.dynamic) {
             html = this.s.dynamicEl[index].html;
@@ -482,7 +485,8 @@
      *  @desc add sub-html into the slide
      *  @param {Number} index - index of the slide
      */
-    Plugin.prototype.addHtml = function(index) {
+    Plugin.prototype.addHtml = function (index) {
+        debugger;
         var subHtml = null;
         var subHtmlUrl;
         var $currentEle;
@@ -582,7 +586,7 @@
      *  @param {Boolean} delay - delay for adding complete class. it is 0 except first time.
      */
     Plugin.prototype.loadContent = function(index, rec, delay) {
-
+        debugger;
         var _this = this;
         var _hasPoster = false;
         var _$img;
@@ -591,7 +595,8 @@
         var _srcset;
         var _sizes;
         var _html;
-        var getResponsiveSrc = function(srcItms) {
+        var getResponsiveSrc = function (srcItms) {
+            debugger;
             var rsWidth = [];
             var rsSrc = [];
             for (var i = 0; i < srcItms.length; i++) {
