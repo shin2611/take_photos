@@ -11,6 +11,7 @@ using Utils;
 using TakePhotos.Handler;
 using DataAccess.Factory;
 using Newtonsoft.Json;
+using NLog;
 
 namespace TakePhotos.Controllers
 {
@@ -25,6 +26,10 @@ namespace TakePhotos.Controllers
 
         public IActionResult Index()
         {
+            _logger.LogInformation("Hey, LogInformation");
+            _logger.LogDebug("Hey, LogDebug");
+            _logger.LogWarning("Hey, LogWarning");
+            _logger.LogError("Hey, LogError");
             return View();
         }
 
@@ -99,7 +104,7 @@ namespace TakePhotos.Controllers
             var fileName = "";
             if (!Directory.Exists(uploads))
                 Directory.CreateDirectory(uploads);
-            NLogLogger.LogInfo("UPLOAD IMAGE ARTICLE PATH :" + uploads);
+            _logger.LogInformation("UPLOAD IMAGE ARTICLE PATH :" + uploads);
             try
             {
                 fileName = DateTime.Now.ToString().Replace("/", "-").Replace(" ", "_").Replace(":", "") + ".png";
@@ -116,6 +121,7 @@ namespace TakePhotos.Controllers
                 var imageUrl = Config.IMAGE_URL + fileName;
                 var imageDataBase64 = "data:image/png;base64," + imageData;
                 var result = AbstractDAOFactory.Instance().CreateWEBDAO().InsertPhotos(imageUrl, imageDataBase64, code, examId);
+                _logger.LogInformation("Update Cam Image : result = " + result);
                 if (result > 0)
                     return Json(new { Response = 1, message = "success" });
                 else
@@ -123,7 +129,7 @@ namespace TakePhotos.Controllers
             }
             catch (Exception ex)
             {
-                NLogLogger.LogInfo("UploadFile Exception : " + ex.Message);
+                _logger.LogError(ex, ex.Message);
                 return Json(new { Response = -99, message = "Có lỗi xảy ra", Data = "" });
             }
         }

@@ -1,0 +1,2 @@
+2022-09-23 10:41:06,579 WARN  TakePhotos.Controllers.HomeController.Index [31] - MESSAGE: Hey, this is a WARNING message.
+2022-09-23 10:41:06,694 ERROR TakePhotos.Controllers.HomeController.Index [32] - MESSAGE: Hey, this is an ERROR message.

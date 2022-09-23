@@ -301,3 +301,14 @@ D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\TakePhotos.genruntim
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\Razor\Views\Home\StudentGetList.cshtml.g.cs
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout2.cshtml.g.cs
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\Razor\Views\Home\StudentImagePartial.cshtml.g.cs
+D:\Outsource\take_photos\TakePhotos\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+D:\Outsource\take_photos\TakePhotos\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
+D:\Outsource\take_photos\TakePhotos\bin\Debug\netcoreapp3.1\log4net.config
+D:\Outsource\take_photos\TakePhotos\bin\Debug\netcoreapp3.1\log4net.dll
+D:\Outsource\take_photos\TakePhotos\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+D:\Outsource\take_photos\TakePhotos\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\Outsource\take_photos\TakePhotos\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Outsource\take_photos\TakePhotos\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\Outsource\take_photos\TakePhotos\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Outsource\take_photos\TakePhotos\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+D:\Outsource\take_photos\TakePhotos\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll

@@ -113,6 +113,7 @@
         var studentName = $('#StudentName').val();
         var orderNumber = $('#OrderNumber').val();
         var examId = $('#ExamId').val();
+      
         // Below new canvas to generate flip/mirron image from existing canvas
         var destinationCanvas = document.createElement("canvas");
         var destCtx = destinationCanvas.getContext('2d');
@@ -132,9 +133,9 @@
             type: 'POST',
             url: UrlRoot + 'Home/UploadWebCamImage/',
             data: { imageData: imagebase64data, code: studentCode, examId: examId},
-            /*contentType: 'application/json; charset=utf-8',*/
             dataType: 'json',
             success: function (data) {
+                debugger;
                 if (data.response >= 0) {
                     //const random = Math.floor(Math.random() * myArray.length);
                     //console.log(random, myArray[random]);
