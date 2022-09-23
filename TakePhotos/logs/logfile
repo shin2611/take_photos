@@ -1,2 +1,0 @@
-2022-09-23 11:02:33,083 WARN  TakePhotos.Controllers.HomeController.Index [31] - MESSAGE: Hey, LogWarning
-2022-09-23 11:02:33,112 ERROR TakePhotos.Controllers.HomeController.Index [32] - MESSAGE: Hey, LogError

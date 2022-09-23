@@ -26,10 +26,6 @@ namespace TakePhotos.Controllers
 
         public IActionResult Index()
         {
-            _logger.LogInformation("Hey, LogInformation");
-            _logger.LogDebug("Hey, LogDebug");
-            _logger.LogWarning("Hey, LogWarning");
-            _logger.LogError("Hey, LogError");
             return View();
         }
 
@@ -52,6 +48,7 @@ namespace TakePhotos.Controllers
 
         public IActionResult StudentGetList(string examId)
         {
+
             if (string.IsNullOrEmpty(examId))
             {
                 return View();

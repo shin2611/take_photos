@@ -89,6 +89,7 @@
         $('#img-demo').css("display", "none");
         $('#canvas').css("display", "block");
         SaveCapture();
+        //ShowData();
     }
 
     function ShowData() {
@@ -98,7 +99,7 @@
         var examId = $('#ExamId').val();
         swal({
             title: "Chào mừng bạn " + studentName,
-            text: "Mời bạn về máy số " + orderNumber + " để dự thi",
+            text: "Mời bạn về máy số "  + orderNumber + "để dự thi",
             type: "success",
             showCancelButton: !1,
             confirmButtonColor: "#DD6B55",
@@ -119,8 +120,8 @@
         var destCtx = destinationCanvas.getContext('2d');
 
 
-        destinationCanvas.height = 500;
-        destinationCanvas.width = 500;
+        destinationCanvas.height = 450;
+        destinationCanvas.width = 900;
 
         destCtx.translate(video.videoWidth, 0);
         destCtx.scale(-1, 1);
@@ -141,7 +142,7 @@
                     //console.log(random, myArray[random]);
                     swal({
                         title: "Chào mừng bạn " + studentName,
-                        text: "Mời bạn về máy số " + orderNumber + " để dự thi",
+                        text: "Mời bạn về máy số  " + orderNumber + "  để dự thi",
                         type: "success",
                         showCancelButton: !1,
                         confirmButtonColor: "#DD6B55",

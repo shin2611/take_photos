@@ -128,11 +128,13 @@
 
     <script>
         $(document).ready(function () {
-            setInterval(LoadImage(),10000);
+            setInterval(LoadImage(),15000);
         });
 
         function LoadImage() {
-            var examId = "";
+            var url_string = window.location.href;
+            var url = new URL(url_string);
+            var examId = url.searchParams.get("examId");
             $.ajax({
                 type: 'GET',
                 url: UrlRoot + "Home/StudentImagePartial",
