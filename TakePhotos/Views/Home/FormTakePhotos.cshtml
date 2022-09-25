@@ -141,12 +141,13 @@
                     //const random = Math.floor(Math.random() * myArray.length);
                     //console.log(random, myArray[random]);
                     swal({
-                        title: "Chào mừng bạn " + studentName,
-                        text: "Mời bạn về máy số  " + orderNumber + "  để dự thi",
+                        title: "Chào mừng thí sinh " + studentCode,
+                        //text: "Mời thí sinh về máy số  " + orderNumber + "  để dự thi",
+                        html: '<span style="border: solid 1px #898989;padding: 8px;border-radius: 5px;"> Mời thí sinh về máy số ' + '<b style="color:red;">' + orderNumber + '</b>' + ' để dự thi </span>',
                         type: "success",
                         showCancelButton: !1,
                         confirmButtonColor: "#DD6B55",
-                        confirmButtonText: "Mời bạn tiếp theo !",
+                        confirmButtonText: "Mời thí sinh tiếp theo !",
                     }).then(function () {
                         window.location.href = UrlRoot;
                     });
