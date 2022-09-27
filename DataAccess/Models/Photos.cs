@@ -11,5 +11,6 @@ namespace DataAccess.Models
         public string ImageBase64 { get; set; }
         public string StudentCode { get; set; }
         public string ExamId { get; set; }
+        public int OrderNumber { get; set; }
     }
 }

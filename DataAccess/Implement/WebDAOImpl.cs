@@ -80,18 +80,19 @@ namespace DataAccess.Implement
             }
         }
 
-        public int InsertPhotos(string imageUrl, string imageBase64, string studentCode, string examId)
+        public int InsertPhotos(string imageUrl, string imageBase64, string studentCode, string examId, int orderNumber)
         {
             try
             {
-                var pars = new SqlParameter[5];
+                var pars = new SqlParameter[6];
                 pars[0] = new SqlParameter("@ImageUrl", imageUrl);
                 pars[1] = new SqlParameter("@ImageBase64", imageBase64);
                 pars[2] = new SqlParameter("@StudentCode", studentCode);
                 pars[3] = new SqlParameter("@ExamId", examId);
-                pars[4] = new SqlParameter("@ResponseStatus", SqlDbType.Int) { Direction = ParameterDirection.Output };
+                pars[4] = new SqlParameter("@OrderNumber", orderNumber);
+                pars[5] = new SqlParameter("@ResponseStatus", SqlDbType.Int) { Direction = ParameterDirection.Output };
                 new DBHelper(Config.ConnectionString.SQLConnCMS).ExecuteNonQuerySP("SP_Photos_Insert", pars);
-                return Convert.ToInt32(pars[4].Value);
+                return Convert.ToInt32(pars[5].Value);
             }
             catch (Exception e)
             {

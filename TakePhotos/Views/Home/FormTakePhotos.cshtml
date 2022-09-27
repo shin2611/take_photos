@@ -133,7 +133,7 @@
         $.ajax({
             type: 'POST',
             url: UrlRoot + 'Home/UploadWebCamImage/',
-            data: { imageData: imagebase64data, code: studentCode, examId: examId},
+            data: { imageData: imagebase64data, code: studentCode, examId: examId, numberOrder: parseInt(orderNumber) },
             dataType: 'json',
             success: function (data) {
                 debugger;
@@ -142,7 +142,8 @@
                     //console.log(random, myArray[random]);
                     swal({
                         title: "Chào mừng bạn " + studentName,
-                        text: "Mời bạn về máy số  " + orderNumber + "  để dự thi",
+                        //text: "Mời bạn về máy số  " + orderNumber + "  để dự thi",
+                        html: '<span style="border: solid 1px #898989;padding: 8px;border-radius: 5px;"> Mời thí sinh về máy số ' + '<b style="color:red;">' + orderNumber + '</b>' + ' để dự thi </span>',
                         type: "success",
                         showCancelButton: !1,
                         confirmButtonColor: "#DD6B55",

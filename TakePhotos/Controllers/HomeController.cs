@@ -94,7 +94,7 @@ namespace TakePhotos.Controllers
             return Json(new { Response = -9, message = "Mã sinh viên không đúng", Data = "" });
         }
 
-        public JsonResult UploadWebCamImage(string imageData, string code, string examId)
+        public JsonResult UploadWebCamImage(string imageData, string code, string examId, int numberOrder)
         {
             string uploads = Path.Combine(Config.MEDIA_DISK + "Photos/");
             //string filename = Path.Combine(Config.MEDIA_DISK + "Photos/") + DateTime.Now.ToString().Replace("/", "-").Replace(" ", "_").Replace(":", "") + ".png";
@@ -117,7 +117,7 @@ namespace TakePhotos.Controllers
                 }
                 var imageUrl = Config.IMAGE_URL + fileName;
                 var imageDataBase64 = "data:image/png;base64," + imageData;
-                var result = AbstractDAOFactory.Instance().CreateWEBDAO().InsertPhotos(imageUrl, imageDataBase64, code, examId);
+                var result = AbstractDAOFactory.Instance().CreateWEBDAO().InsertPhotos(imageUrl, imageDataBase64, code, examId, numberOrder);
                 _logger.LogInformation("Update Cam Image : result = " + result);
                 if (result > 0)
                     return Json(new { Response = 1, message = "success" });

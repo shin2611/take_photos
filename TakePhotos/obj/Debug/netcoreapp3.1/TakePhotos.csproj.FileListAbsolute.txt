@@ -277,8 +277,6 @@ D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\TakePhotos.MvcApplic
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\TakePhotos.RazorAssemblyInfo.cache
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\TakePhotos.RazorAssemblyInfo.cs
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\staticwebassets\TakePhotos.StaticWebAssets.Manifest.cache
-D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\staticwebassets\TakePhotos.StaticWebAssets.xml
-D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\scopedcss\bundle\TakePhotos.styles.css
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\TakePhotos.TagHelpers.input.cache
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\TakePhotos.TagHelpers.output.cache
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\TakePhotos.RazorCoreGenerate.cache
@@ -312,3 +310,5 @@ D:\Outsource\take_photos\TakePhotos\bin\Debug\netcoreapp3.1\Microsoft.Extensions
 D:\Outsource\take_photos\TakePhotos\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
 D:\Outsource\take_photos\TakePhotos\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
 D:\Outsource\take_photos\TakePhotos\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\staticwebassets\TakePhotos.StaticWebAssets.xml
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\scopedcss\bundle\TakePhotos.styles.css

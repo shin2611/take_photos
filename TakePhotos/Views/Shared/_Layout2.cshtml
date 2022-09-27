@@ -61,6 +61,7 @@
             font-size: 14px;
             font-weight: 700;
             top: 5px;
+            color:#000;
         }
     </style>
 </head>
@@ -127,26 +128,30 @@
     <script src="~/Content/js/deznav-init.js"></script>
 
     <script>
-        $(document).ready(function () {
-            setInterval(LoadImage(),15000);
-        });
+        var timer = 0;
+        const myInterval = setInterval(LoadImage, 1000);
 
         function LoadImage() {
-            var url_string = window.location.href;
-            var url = new URL(url_string);
-            var examId = url.searchParams.get("examId");
-            $.ajax({
-                type: 'GET',
-                url: UrlRoot + "Home/StudentImagePartial",
-                data: { examId: examId },
-                dataType: 'html',
-                success: function (res) {
-                    $('#content-images').html(res);
-                },
-                error: function () {
-                    sweetAlert("Oops...", "Hệ thống bận, vui lòng quay lại sau!", "error");
-                }
-            });
+            timer++;
+            if (timer >= 15) {
+                var url_string = window.location.href;
+                var url = new URL(url_string);
+                var examId = url.searchParams.get("examId");
+                $.ajax({
+                    type: 'GET',
+                    url: UrlRoot + "Home/StudentImagePartial",
+                    data: { examId: examId },
+                    dataType: 'html',
+                    success: function (res) {
+                        timer = 0;
+                        $('#content-images').html(res);
+                    },
+                    error: function () {
+                        sweetAlert("Oops...", "Hệ thống bận, vui lòng quay lại sau!", "error");
+                    }
+                });
+            }
+            console.log(timer);
         }
     </script>
 
