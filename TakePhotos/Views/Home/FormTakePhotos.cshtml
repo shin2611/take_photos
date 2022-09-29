@@ -24,9 +24,10 @@
                     Hình ảnh minh họa
                 </h4>
                 <div id="img-demo">
-                    <img src="~/Content/images/demo_kyc.jpg" style="width:340px;height:515px;" />
+                    @*<img src="~/Content/images/demo_kyc.jpg" style="width:340px;height:515px;" />*@
+                    <img src="~/Content/images/demo_kyc.jpg" />
                 </div>
-                <canvas style="border:solid 1px #ddd;background-color:white;display:none;" id="canvas" width="340" height="515"></canvas>
+                <canvas style="border:solid 1px #ddd;background-color:white;display:none;" id="canvas" width="600" height="500"></canvas>
             </div>
         </div>
     </div>
@@ -120,8 +121,8 @@
         var destCtx = destinationCanvas.getContext('2d');
 
 
-        destinationCanvas.height = 450;
-        destinationCanvas.width = 900;
+        destinationCanvas.height = 500;
+        destinationCanvas.width = 500;
 
         destCtx.translate(video.videoWidth, 0);
         destCtx.scale(-1, 1);
@@ -138,16 +139,13 @@
             success: function (data) {
                 debugger;
                 if (data.response >= 0) {
-                    //const random = Math.floor(Math.random() * myArray.length);
-                    //console.log(random, myArray[random]);
                     swal({
-                        title: "Chào mừng bạn " + studentName,
-                        //text: "Mời bạn về máy số  " + orderNumber + "  để dự thi",
+                        title: "Chào mừng thí sinh " + studentName,
                         html: '<span style="border: solid 1px #898989;padding: 8px;border-radius: 5px;"> Mời thí sinh về máy số ' + '<b style="color:red;">' + orderNumber + '</b>' + ' để dự thi </span>',
                         type: "success",
                         showCancelButton: !1,
                         confirmButtonColor: "#DD6B55",
-                        confirmButtonText: "Mời bạn tiếp theo !",
+                        confirmButtonText: "Mời thí sinh tiếp theo !",
                     }).then(function () {
                         window.location.href = UrlRoot;
                     });

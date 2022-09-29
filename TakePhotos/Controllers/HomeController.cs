@@ -104,7 +104,7 @@ namespace TakePhotos.Controllers
             _logger.LogInformation("UPLOAD IMAGE ARTICLE PATH :" + uploads);
             try
             {
-                fileName = DateTime.Now.ToString().Replace("/", "-").Replace(" ", "_").Replace(":", "") + ".png";
+                fileName = DateTime.Now.ToString().Replace("/", "-").Replace(" ", "_").Replace(":", "") + ".jpg";
                 using (var fileStream = new FileStream(Path.Combine(uploads, fileName), FileMode.Create))
                 {
                     //file.CopyTo(fileStream);

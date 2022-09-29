@@ -18,9 +18,9 @@
                     {
                         foreach (var item in Model)
                         {
-                            <a href="@item.ImageUrl" data-exthumbimage="@item.ImageUrl" data-src="@item.ImageUrl" class="col-lg-2 col-md-6 mb-4">
+                            <a href="@item.ImageUrl" data-exthumbimage="@item.ImageUrl" data-src="@item.ImageUrl" style="width:175px;height:220px;">
                                 <img src="@item.ImageUrl" alt="" style="width:100%;" />
-                                <span class="span-item">Mã học viên : <b style="color:blue">@item.StudentCode</b></span>
+                                <span class="span-item">Mã HV : <b style="color:blue">@item.StudentCode</b></span>
                                 <br />
                                 <span class="span-item">Số máy : <b style="color:red;">@item.OrderNumber</b></span>
                             </a>

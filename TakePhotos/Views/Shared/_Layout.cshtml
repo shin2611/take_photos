@@ -115,6 +115,7 @@
             //const newArr = myArray.filter(e => e !== '01');
         });
         function Search() {
+            debugger;
             var studentCode = $('#txtStudentCode').val();
             if (studentCode == '') {
                 sweetAlert("Oops...", "Bạn chưa nhập mã sinh viên !!", "error");
@@ -125,6 +126,7 @@
                     data: { studentCode: studentCode },
                     dataType: 'json',
                     success: function (res) {
+                        debugger;
                         if (res.response >= 0) {
                             var Data = JSON.parse(res.data)
                             if (Data.success == true) {
