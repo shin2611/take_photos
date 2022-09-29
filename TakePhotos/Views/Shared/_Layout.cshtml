@@ -130,14 +130,18 @@
                         if (res.response >= 0) {
                             var Data = JSON.parse(res.data)
                             if (Data.success == true) {
-                                if (Data.data.examination.active == false) {
-                                    swal("Ca thi chưa bắt đầu, bạn vui lòng quay lại sau !!");
-                                }
-                                else if (Data.data.examination.canStart == true) {
-                                    swal("Ca thi đã bắt đầu, bạn vui lòng quay lại sau !!");
+                                if (Data.data.examination != null) {
+                                    if (Data.data.examination.active == false) {
+                                        swal("Ca thi chưa bắt đầu, vui lòng quay lại sau !");
+                                    }
+                                    else if (Data.data.examination.canStart == true) {
+                                        swal("Ca thi đã bắt đầu, bạn vui lòng quay lại sau !!");
+                                    } else {
+                                        var code = Data.data.student.studentCode;
+                                        window.location.href = UrlRoot + "Home/FormTakePhotos?studentCode=" + code;
+                                    }
                                 } else {
-                                    var code = Data.data.student.studentCode;
-                                    window.location.href = UrlRoot + "Home/FormTakePhotos?studentCode=" + code;
+                                    swal("Ca thi chưa bắt đầu, vui lòng quay lại sau !");
                                 }
                             }
                             else

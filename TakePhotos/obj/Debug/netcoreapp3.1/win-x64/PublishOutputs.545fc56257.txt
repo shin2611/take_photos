@@ -3003,6 +3003,8 @@ D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\w
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\UploadImages\Photos\9-28-2022_102527_PM.jpg
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\UploadImages\Photos\9-28-2022_102713_PM.jpg
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\UploadImages\Photos\9-28-2022_102853_PM.jpg
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\UploadImages\Photos\9-29-2022_113950_AM.jpg
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\UploadImages\Photos\9-29-2022_84203_AM.jpg
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\log4net.config
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\appsettings.Development.json
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\appsettings.json

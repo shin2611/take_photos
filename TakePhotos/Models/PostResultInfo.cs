@@ -17,7 +17,7 @@ namespace TakePhotos.Models
     {
         public Student student { get; set; }
         public Examination examination { get; set; }
-        public int orderNumber { get; set; }
+        public object orderNumber { get; set; }
         public UserInfo user { get; set; }
     }
 

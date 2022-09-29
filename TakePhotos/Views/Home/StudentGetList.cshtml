@@ -4,8 +4,6 @@
     ViewData["Title"] = "Danh sách học viên dự thi";
     Layout = "/Views/Shared/_Layout2.cshtml";
 }
-
-
 <div class="row">
     <div class="col-lg-12">
         <div class="card">
@@ -13,12 +11,13 @@
                 <h4 class="card-title">Danh sách học viên dự thi</h4>
             </div>
             <div class="card-body pb-1">
+                <input type="hidden" value="@ViewBag.ExamId" id="txtExamId"/>
                 <div id="lightgallery" class="row">
                     @if (Model != null && Model.Count > 0)
                     {
                         foreach (var item in Model)
                         {
-                            <a href="@item.ImageUrl" data-exthumbimage="@item.ImageUrl" data-src="@item.ImageUrl" style="width:175px;height:220px;">
+                            <a href="@item.ImageUrl" data-exthumbimage="@item.ImageUrl" data-src="@item.ImageUrl" style="width:175px;height:220px;padding:8px;">
                                 <img src="@item.ImageUrl" alt="" style="width:100%;" />
                                 <span class="span-item">Mã HV : <b style="color:blue">@item.StudentCode</b></span>
                                 <br />
@@ -65,3 +64,34 @@
         <!-- /# card -->
     </div>
 </div>
+
+<script>
+        var timer = 0;
+        const myInterval = setInterval(LoadImage, 1000);
+
+        function LoadImage() {
+            timer++;
+            if (timer >= 15) {
+                debugger;
+                var url_string = window.location.href;
+                var url = new URL(url_string);
+                var examId = $("#txtExamId").val();
+                if (examId == "")
+                    examId = url.searchParams.get("examId");
+                timer = 0;
+                $.ajax({
+                    type: 'GET',
+                    url: 'http://192.168.88.182:5479/Home/StudentImagePartial', //+ "Home/StudentGetList",
+                    data: { examId: examId },
+                    dataType: 'html',
+                    success: function (res) {
+                        $('#lightgallery').html(res);
+                    },
+                    error: function () {
+                        sweetAlert("Oops...", "Hệ thống bận, vui lòng quay lại sau!", "error");
+                    }
+                });
+            }
+            console.log(timer);
+        }
+</script>

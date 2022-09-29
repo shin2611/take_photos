@@ -53,6 +53,7 @@ namespace TakePhotos.Controllers
             {
                 return View();
             }
+            ViewBag.ExamId = examId;
             var data = AbstractDAOFactory.Instance().CreateWEBDAO().StudentGetList(examId);
             return View("StudentGetList", data);
         }
@@ -74,9 +75,18 @@ namespace TakePhotos.Controllers
             if (res.statusCode == 200)
             {
                 var returnData = JsonConvert.DeserializeObject<PostResultInfo>(res.data);
-                ViewBag.StudentName = returnData.data.user.username;
-                ViewBag.OrderNumber = returnData.data.orderNumber;
-                ViewBag.ExamId = returnData.data.examination.id;
+                if (returnData.data.user != null)
+                    ViewBag.StudentName = returnData.data.user.username;
+                else
+                    ViewBag.StudentName = "";
+                if (returnData.data.orderNumber != null)
+                    ViewBag.OrderNumber = Convert.ToInt32(returnData.data.orderNumber);
+                else
+                    ViewBag.OrderNumber = 0;
+                if (returnData.data.examination != null)
+                    ViewBag.ExamId = returnData.data.examination.id;
+                else
+                    ViewBag.ExamId = "";
             }
             return View();
         }

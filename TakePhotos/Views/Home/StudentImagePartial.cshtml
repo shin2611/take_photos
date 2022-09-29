@@ -1,29 +1,15 @@
 ﻿@using DataAccess.Models
 @model List<Photos>
 
-<div class="row">
-    <div class="col-lg-12">
-        <div class="card">
-            <div class="card-header">
-                <h4 class="card-title">Danh sách học viên dự thi</h4>
-            </div>
-            <div class="card-body pb-1">
-                <div id="lightgallery" class="row">
-                    @if (Model != null && Model.Count > 0)
-                    {
-                        foreach (var item in Model)
-                        {
-                            <a href="@item.ImageUrl" data-exthumbimage="@item.ImageUrl" data-src="@item.ImageUrl" style="width:175px;height:220px;">
-                                <img src="@item.ImageUrl" alt="" style="width:100%;" />
-                                <span class="span-item">Mã HV : <b style="color:blue">@item.StudentCode</b></span>
-                                <br />
-                                <span class="span-item">Số máy : <b style="color:red;">@item.OrderNumber</b></span>
-                            </a>
-                        }
-                    }
-                </div>
-            </div>
-        </div>
-        <!-- /# card -->
-    </div>
-</div>
+@if (Model != null && Model.Count > 0)
+{
+    foreach (var item in Model)
+    {
+        <a href="@item.ImageUrl" data-exthumbimage="@item.ImageUrl" data-src="@item.ImageUrl" style="width: 175px; height: 220px; padding: 8px;">
+            <img src="@item.ImageUrl" alt="" style="width:100%;" />
+            <span class="span-item">Mã HV : <b style="color:blue">@item.StudentCode</b></span>
+            <br />
+            <span class="span-item">Số máy : <b style="color:red;">@item.OrderNumber</b></span>
+        </a>
+    }
+}
