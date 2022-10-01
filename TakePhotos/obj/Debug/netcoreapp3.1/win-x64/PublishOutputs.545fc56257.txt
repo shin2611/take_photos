@@ -1,4 +1,16 @@
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\TakePhotos.exe
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\assets\svg-loaders\audio.svg
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\assets\svg-loaders\ball-triangle.svg
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\assets\svg-loaders\bars.svg
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\assets\svg-loaders\circles.svg
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\assets\svg-loaders\grid.svg
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\assets\svg-loaders\hearts.svg
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\assets\svg-loaders\oval.svg
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\assets\svg-loaders\puff.svg
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\assets\svg-loaders\rings.svg
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\assets\svg-loaders\spinning-circles.svg
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\assets\svg-loaders\tail-spin.svg
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\assets\svg-loaders\three-dots.svg
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\Content\css\perfect-scrollbar.css
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\Content\css\style.css
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\Content\css\style.css.map
@@ -2961,6 +2973,7 @@ D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\w
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\js\jquery-1.11.3.js
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\js\jquery-1.11.3.min.js
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\js\site.js
+D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\js\utils.js
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 D:\Outsource\take_photos\TakePhotos\obj\Debug\netcoreapp3.1\win-x64\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css

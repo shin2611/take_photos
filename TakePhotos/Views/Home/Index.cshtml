@@ -10,13 +10,13 @@
                         @*<img src="images/logo-full.png" alt="">*@
                     </div>
                     <h4 class="text-center mb-4">MỜI BẠN NHẬP MÃ SINH VIÊN</h4>
-                    <form action="">
-                        <div class="form-group"> 
+                    <form id="formCode">
+                        <div class="form-group">
                             <label><strong>Mã sinh viên </strong></label>
                             <input type="text" class="form-control" value="" id="txtStudentCode" placeholder="Nhập mã sinh viên">
                         </div>
                         <div class="text-center">
-                            <button type="button" id="btnSubmit" onclick="Search();" class="btn btn-primary btn-block">Submit</button>
+                            <a href="javascript:;" id="btnConfirm" onclick="Search();" class="btn btn-primary btn-block">Submit</a>
                         </div>
                     </form>
                 </div>
@@ -24,3 +24,60 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function () {
+        var input = document.getElementById("txtStudentCode");
+        input.addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                document.getElementById("btnConfirm").click();
+            }
+        });
+    });
+
+    function Search() {
+        debugger;
+        utils.Loading();
+        var studentCode = $('#txtStudentCode').val();
+        if (studentCode == '') {
+            sweetAlert("Oops...", "Bạn chưa nhập mã sinh viên !!", "error");
+        } else {
+            $.ajax({
+                type: 'POST',
+                url: UrlRoot + "Home/CheckDataStudent",
+                data: { studentCode: studentCode },
+                dataType: 'json',
+                success: function (res) {
+                    utils.unLoading();
+                    if (res.response >= 0) {
+                        var Data = JSON.parse(res.data)
+                        if (Data.success == true) {
+                            if (Data.data.examination != null) {
+                                if (Data.data.examination.active == false) {
+                                    swal("Ca thi chưa bắt đầu, vui lòng quay lại sau !");
+                                }
+                                else if (Data.data.examination.canStart == true) {
+                                    swal("Ca thi đã bắt đầu, bạn vui lòng quay lại sau !!");
+                                } else {
+                                    var code = Data.data.student.studentCode;
+                                    window.location.href = UrlRoot + "Home/FormTakePhotos?studentCode=" + code;
+                                }
+                            } else {
+                                swal("Ca thi chưa bắt đầu, vui lòng quay lại sau !");
+                            }
+                        }
+                        else
+                            swal("Học viên không tồn tại !!");
+                    }
+                    else {
+                        sweetAlert("Oops...", res.message, "error");
+                    }
+                },
+                error: function () {
+                    sweetAlert("Oops...", "Hệ thống bận, vui lòng quay lại sau!", "error");
+                }
+            });
+        }
+    }
+</script>

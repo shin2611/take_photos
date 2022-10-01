@@ -100,8 +100,8 @@ namespace TakePhotos.Controllers
             var res = AccessAPI.GetDataAPI(url_data);
             if (res.statusCode == 200)
                 return Json(new { Response = 1, message = "success", Data = res.data });
-
-            return Json(new { Response = -9, message = "Mã sinh viên không đúng", Data = "" });
+            else
+                return Json(new { Response = -9, message = "Mã sinh viên không đúng", Data = "" });
         }
 
         public JsonResult UploadWebCamImage(string imageData, string code, string examId, int numberOrder)

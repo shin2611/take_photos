@@ -104,60 +104,6 @@
     <script src="~/Content/vendor/deznav/deznav.min.js"></script>
     <script src="~/Content/js/custom.min.js"></script>
     <script src="~/Content/js/deznav-init.js"></script>
-
-    <script>
-        $(document).ready(function () {
-            $('#txtStudentCode').on('keypress', function (e) {
-                if (e.which === 13) {
-                    Search();
-                }
-            });
-            //const newArr = myArray.filter(e => e !== '01');
-        });
-        function Search() {
-            debugger;
-            var studentCode = $('#txtStudentCode').val();
-            if (studentCode == '') {
-                sweetAlert("Oops...", "Bạn chưa nhập mã sinh viên !!", "error");
-            } else {
-                $.ajax({
-                    type: 'POST',
-                    url: UrlRoot + "Home/CheckDataStudent",
-                    data: { studentCode: studentCode },
-                    dataType: 'json',
-                    success: function (res) {
-                        debugger;
-                        if (res.response >= 0) {
-                            var Data = JSON.parse(res.data)
-                            if (Data.success == true) {
-                                if (Data.data.examination != null) {
-                                    if (Data.data.examination.active == false) {
-                                        swal("Ca thi chưa bắt đầu, vui lòng quay lại sau !");
-                                    }
-                                    else if (Data.data.examination.canStart == true) {
-                                        swal("Ca thi đã bắt đầu, bạn vui lòng quay lại sau !!");
-                                    } else {
-                                        var code = Data.data.student.studentCode;
-                                        window.location.href = UrlRoot + "Home/FormTakePhotos?studentCode=" + code;
-                                    }
-                                } else {
-                                    swal("Ca thi chưa bắt đầu, vui lòng quay lại sau !");
-                                }
-                            }
-                            else
-                                swal("Học viên không tồn tại !!");
-                        }
-                        else {
-                            sweetAlert("Error", res.message, "error");
-                        }
-                    },
-                    error: function () {
-                        sweetAlert("Oops...", "Hệ thống bận, vui lòng quay lại sau!", "error");
-                    }
-                });
-            }
-        }
-    </script>
-
+    <script src="~/js/utils.js"></script>
 </body>
 </html>
